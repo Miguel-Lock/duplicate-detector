@@ -1,0 +1,1 @@
+This exists soley so I can find how to take an MD5 hash of a file with Perl
