@@ -26,19 +26,20 @@ sub process_file {
 
         my $md5sum = $md5->hexdigest;
 
-        say $md5sum;
-        say $file;
+        #say $md5sum;
+        #say $file;
 
         if (exists($md5hash{$md5sum})) {
-            say "YOU HAVE DUPLICATE";
             push @{$md5hash{$md5sum}}, $file;
-            
-            push @duplicated, $md5sum;
+
+            if (scalar @{$md5hash{$md5sum}} == 2) {
+                push @duplicated, $md5sum;
+            }
         } else {
             push @{$md5hash{$md5sum}}, $file;
         }
 
-        print("\n");
+        #print("\n");
     }
 }
 
@@ -69,7 +70,7 @@ sub main {
     # Use File::Find to traverse the directory and call the callback function
     find(\&process_file, $directory);
 
-    remove_duplicates();
+    #remove_duplicates();
 
     #foreach my $element (@duplicated) {
     #    print("$element\n");
@@ -99,6 +100,7 @@ sub main {
     #add ability to use . as default
     #add option to auto-delete duplicates
     #add -h option
+    #exclude .git folders
 }
 
 main();
