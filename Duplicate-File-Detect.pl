@@ -85,17 +85,6 @@ sub main {
     }
 
 
-    #if md5 exists as a key in hash:
-    #   increment value at md5
-    #   md5[].append(dir)
-    #   if value=1:
-    #       add multiplied_files[].append(md5)
-    #else:
-    #   add md5 as key in hash, value = 0
-    #   create array md5[dir]
-    #at the end: print the path/filename of identical files
-
-
     #add option for user to input files (default .)
     #add ability to use . as default
     #add option to auto-delete duplicates
