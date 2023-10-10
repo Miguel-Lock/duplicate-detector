@@ -43,25 +43,6 @@ sub process_file {
     }
 }
 
-sub remove_duplicates {
-    my %seen;
-
-    # Initialize a new array to store the unique elements
-    my @duplicated;
-
-    my @unique_array;
-
-    for my $element (@duplicated) {
-        unless ($seen{$element}) {
-            push @unique_array, $element;
-            $seen{$element} = 1;
-        }
-    }
-
-    # Update the global array with the unique values
-    @duplicated = @unique_array;
-}
-
 sub main {
 
     # Define the directory you want to search
@@ -69,13 +50,6 @@ sub main {
 
     # Use File::Find to traverse the directory and call the callback function
     find(\&process_file, $directory);
-
-    #remove_duplicates();
-
-    #foreach my $element (@duplicated) {
-    #    print("$element\n");
-    #    say $md5hash{$element};
-    #}
 
     foreach my $md5_key (@duplicated) {
         print("$md5_key\n");
