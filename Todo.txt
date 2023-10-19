@@ -1,0 +1,8 @@
+FLAGS:
+ - Add flag to exclude .git folders
+ - Make md5sum not shown on default, have flag to show it
+ - -h to show flags and directions
+ - add option to auto-delete duplicates (which location???)
+ - Reading entire file path is hard, have option to suppress identical sections of file path
+ - Allow user to input file path that it starts on (default .)
+    - Make sure user can physically enter ., or enter ./extra_path

@@ -57,13 +57,6 @@ sub main {
         say join("\n", @values);
         print("\n\n");
     }
-
-
-    #add option for user to input files (default .)
-    #add ability to use . as default
-    #add option to auto-delete duplicates
-    #add -h option
-    #exclude .git folders
 }
 
 main();
