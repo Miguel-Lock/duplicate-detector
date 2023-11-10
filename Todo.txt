@@ -1,3 +1,6 @@
+FIX:
+ - If two directories are the same, do not compare files within those directories. This may be difficult. Godspeed, developer.
+
 FLAGS:
  - Add flag to exclude .git folders
  - Make md5sum not shown on default, have flag to show it
